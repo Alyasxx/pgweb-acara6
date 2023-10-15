@@ -42,7 +42,7 @@
 <div class="container mt-4">
     <div class="card">
         <div class="card-header">
-            <h5>Perbandingan Jumlah Rumah Sakit/Klinik/Puskesmas</h5>
+            <h5>Jumlah Tenaga Kesehatan</h5>
         </div>
         <div class="card-body">
             <div id="chart"></div>
@@ -74,7 +74,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.42.0/apexcharts.min.js" integrity="sha512-HctQcT5hnI/elQck4950pvd50RuDnjCSGSoHI8CNyQIYVxsUoyJ+gSQIOrll4oM/Z7Kfi7WCLMIbJbiwYHFCpA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
        var options = {
-          series: [76, 67, 61, 90],
+          series: [340, 2100, 612, 372, 85],
           chart: {
           height: 390,
           type: 'radialBar',
@@ -100,8 +100,8 @@
             }
           }
         },
-        colors: ['#1ab7ea', '#0084ff', '#39539E', '#0077B5'],
-        labels: ['Vimeo', 'Messenger', 'Facebook', 'LinkedIn'],
+        colors: ['#45496a', '#7d8bae', '#e5857b', '#f1b2b2'],
+        labels: ['Dokter', 'Perawat', 'Bidan', 'Farmasi', 'Ahli Gizi'],
         legend: {
           show: true,
           floating: true,

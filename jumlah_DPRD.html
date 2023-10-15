@@ -42,7 +42,7 @@
 <div class="container mt-4">
     <div class="card">
         <div class="card-header">
-            <h5>Perbandingan Jumlah Rumah Sakit/Klinik/Puskesmas</h5>
+            <h5>Jumlah Anggota DPRD Menurut Partai</h5>
         </div>
         <div class="card-body">
             <div id="chart"></div>
@@ -74,59 +74,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.42.0/apexcharts.min.js" integrity="sha512-HctQcT5hnI/elQck4950pvd50RuDnjCSGSoHI8CNyQIYVxsUoyJ+gSQIOrll4oM/Z7Kfi7WCLMIbJbiwYHFCpA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
        var options = {
-          series: [76, 67, 61, 90],
+          series: [20, 5, 5, 5, 5, 3, 1, 1],
           chart: {
-          height: 390,
-          type: 'radialBar',
+          type: 'polarArea',
+          width: 500
         },
-        plotOptions: {
-          radialBar: {
-            offsetY: 0,
-            startAngle: 0,
-            endAngle: 270,
-            hollow: {
-              margin: 5,
-              size: '30%',
-              background: 'transparent',
-              image: undefined,
-            },
-            dataLabels: {
-              name: {
-                show: false,
-              },
-              value: {
-                show: false,
-              }
-            }
-          }
+        labels: ["PDI P", "GOLKAR", "PAN", "DEMOKRAT", "PKS", "PKB", "GERINDRA", "NASDEM"],
+        colors: ['#f1b2b2', '#7d8bae', '#e5857b', '#45496a', "#8e65ab", "#dc94b0", "#e8c6de", "#d3ba83", "#ebedd4"],
+        stroke: {
+          colors: ['#fff']
         },
-        colors: ['#1ab7ea', '#0084ff', '#39539E', '#0077B5'],
-        labels: ['Vimeo', 'Messenger', 'Facebook', 'LinkedIn'],
-        legend: {
-          show: true,
-          floating: true,
-          fontSize: '16px',
-          position: 'left',
-          offsetX: 160,
-          offsetY: 15,
-          labels: {
-            useSeriesColors: true,
-          },
-          markers: {
-            size: 0
-          },
-          formatter: function(seriesName, opts) {
-            return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex]
-          },
-          itemMargin: {
-            vertical: 3
-          }
+        fill: {
+          opacity: 0.8
         },
         responsive: [{
           breakpoint: 480,
           options: {
+            chart: {
+              width: 200
+            },
             legend: {
-                show: false
+              position: 'bottom'
             }
           }
         }]
